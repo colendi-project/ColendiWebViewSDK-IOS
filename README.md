@@ -105,7 +105,7 @@ class ViewController: UIViewController, ColendiWebViewDelegate {
 
 ```
 
-# Author
+# Authors
 
 [Gökberk Bardakçı](https://www.github.com/gokberkbar), [Uygar İşiçelik](https://www.github.com/uygar) from [Colendi](https://www.twitter.com/colendiapp)
 
