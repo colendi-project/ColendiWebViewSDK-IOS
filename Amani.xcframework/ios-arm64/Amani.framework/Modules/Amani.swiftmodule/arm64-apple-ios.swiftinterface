@@ -1,0 +1,1639 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Amani
+import AVFoundation
+import Accelerate
+@_exported import Amani
+import AudioToolbox
+import CommonCrypto
+import CoreGraphics
+import CoreLocation
+import CoreMotion
+import CoreNFC
+import CryptoKit
+import CryptoTokenKit
+import Foundation
+import Lottie
+import Metal
+import MetalKit
+import MetalPerformanceShaders
+import MobileCoreServices
+import OpenSSL
+import QuartzCore
+import Swift
+import UIKit
+import Vision
+import WebKit
+import _Concurrency
+@available(iOSApplicationExtension, unavailable)
+@objc public enum IQAutoToolbarManageBehaviour : Swift.Int {
+  case bySubviews
+  case byTag
+  case byPosition
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+@objc public enum IQPreviousNextDisplayMode : Swift.Int {
+  case `default`
+  case alwaysHide
+  case alwaysShow
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+@objc public enum IQEnableMode : Swift.Int {
+  case `default`
+  case enabled
+  case disabled
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@objc final public class IQKeyboardReturnKeyHandler : ObjectiveC.NSObject {
+  @objc weak final public var delegate: (UIKit.UITextFieldDelegate & UIKit.UITextViewDelegate)?
+  @objc final public var lastTextFieldReturnKeyType: UIKit.UIReturnKeyType {
+    @objc get
+    @objc set
+  }
+  @objc override dynamic public init()
+  @objc public init(controller: UIKit.UIViewController)
+  @objc deinit
+  @objc final public func addTextFieldView(_ view: UIKit.UIView)
+  @objc final public func removeTextFieldView(_ view: UIKit.UIView)
+  @objc final public func addResponderFromView(_ view: UIKit.UIView)
+  @objc final public func removeResponderFromView(_ view: UIKit.UIView)
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardReturnKeyHandler : UIKit.UITextFieldDelegate {
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @available(iOS 10.0, *)
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextField.DidEndEditingReason)
+  @objc @_Concurrency.MainActor(unsafe) final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardReturnKeyHandler : UIKit.UITextViewDelegate {
+  @objc @_Concurrency.MainActor(unsafe) final public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textViewShouldEndEditing(_ textView: UIKit.UITextView) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidChange(_ textView: UIKit.UITextView)
+  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
+  @available(iOS 10.0, *)
+  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+  @available(iOS 10.0, *)
+  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+  @available(iOS, deprecated: 10.0)
+  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange) -> Swift.Bool
+  @available(iOS, deprecated: 10.0)
+  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange) -> Swift.Bool
+}
+public struct CustomerRequestModel : Swift.Codable {
+  public var name: Swift.String?
+  public var email: Swift.String?
+  public var phone: Swift.String?
+  public var idCardNumber: Swift.String?
+  public init(name: Swift.String? = nil, email: Swift.String? = nil, phone: Swift.String? = nil, idCardNumber: Swift.String)
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup11 : Amani.DataGroup {
+  public var fullName: Swift.String? {
+    get
+  }
+  public var personalNumber: Swift.String? {
+    get
+  }
+  public var dateOfBirth: Swift.String? {
+    get
+  }
+  public var placeOfBirth: Swift.String? {
+    get
+  }
+  public var address: Swift.String? {
+    get
+  }
+  public var telephone: Swift.String? {
+    get
+  }
+  public var profession: Swift.String? {
+    get
+  }
+  public var title: Swift.String? {
+    get
+  }
+  public var personalSummary: Swift.String? {
+    get
+  }
+  public var proofOfCitizenship: Swift.String? {
+    get
+  }
+  public var tdNumbers: Swift.String? {
+    get
+  }
+  public var custodyInfo: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup {
+  public var datagroupType: Amani.DataGroupId
+  public var body: [Swift.UInt8] {
+    get
+  }
+  public var data: [Swift.UInt8] {
+    get
+  }
+  public func hash(_ hashAlgorythm: Swift.String) -> [Swift.UInt8]
+  @objc deinit
+}
+@objc @available(iOS 13, *)
+public class PassportReader : ObjectiveC.NSObject {
+  public var passiveAuthenticationUsesOpenSSL: Swift.Bool
+  public init(logLevel: Amani.LogLevel = .error, masterListURL: Foundation.URL? = nil)
+  public func setMasterListURL(_ masterListURL: Foundation.URL)
+  public func overrideNFCDataAmountToRead(amount: Swift.Int)
+  public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.NFCPassportReaderError?) -> ())
+  @objc deinit
+}
+@available(iOS 13, *)
+extension Amani.PassportReader : CoreNFC.NFCTagReaderSessionDelegate {
+  public func tagReaderSessionDidBecomeActive(_ session: CoreNFC.NFCTagReaderSession)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didInvalidateWithError error: Swift.Error)
+  public func tagReaderSession(_ session: CoreNFC.NFCTagReaderSession, didDetect tags: [CoreNFC.NFCTag])
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup7 : Amani.DataGroup {
+  public var imageData: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class SecurityInfo {
+  public func getObjectIdentifier() -> Swift.String
+  public func getProtocolOIDString() -> Swift.String
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class mkNetwork {
+  public func request<T, R>(url: Swift.String, method: Amani.HTTPMethod, parameters: T? = nil, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, ResultType: R.Type, Response: @escaping (Swift.Result<R, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
+  public func request<T>(url: Swift.String, method: Amani.HTTPMethod, parameters: T? = nil, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, Response: @escaping (Swift.Result<Amani.ResponseData, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable
+  public func multiPartRequest<T>(url: Swift.String, method: Amani.HTTPMethod, parameters: T?, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, Response: @escaping (Swift.Result<Amani.ResponseData, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable
+  public func multiPartRequest<T, R>(url: Swift.String, method: Amani.HTTPMethod, parameters: T?, headers: [Swift.String : Swift.String]? = nil, queryParams: [Swift.String : Swift.String]? = nil, signKey: Swift.String? = nil, ResultType: R.Type, Response: @escaping (Swift.Result<R, Swift.Error>) -> ()) where T : Swift.Decodable, T : Swift.Encodable, R : Swift.Decodable, R : Swift.Encodable
+  @objc deinit
+}
+public enum iProgressHUDStyles {
+  case vertical
+  case horizontal
+  public static func == (a: Amani.iProgressHUDStyles, b: Amani.iProgressHUDStyles) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+open class iProgressHUD {
+  open var indicatorStyle: Amani.NVActivityIndicatorType
+  open var iprogressStyle: Amani.iProgressHUDStyles
+  open var indicatorView: Amani.NVActivityIndicatorView!
+  final public let modalView: UIKit.UIImageView
+  final public let boxView: UIKit.UIImageView!
+  final public let captionView: UIKit.UILabel!
+  open var indicatorSize: CoreGraphics.CGFloat
+  open var alphaModal: CoreGraphics.CGFloat
+  open var alphaBox: CoreGraphics.CGFloat
+  open var boxSize: CoreGraphics.CGFloat
+  open var boxCorner: CoreGraphics.CGFloat
+  open var captionDistance: CoreGraphics.CGFloat
+  open var isShowCaption: Swift.Bool
+  open var isShowModal: Swift.Bool
+  open var isShowBox: Swift.Bool
+  open var isBlurModal: Swift.Bool
+  open var isBlurBox: Swift.Bool
+  open var isTouchDismiss: Swift.Bool
+  open var modalColor: UIKit.UIColor
+  open var boxColor: UIKit.UIColor
+  open var captionColor: UIKit.UIColor
+  open var indicatorColor: UIKit.UIColor
+  open var captionSize: CoreGraphics.CGFloat
+  open var delegete: Amani.iProgressHUDDelegete?
+  public init()
+  public init(style: Amani.NVActivityIndicatorType)
+  public static func sharedInstance() -> Amani.iProgressHUD
+  open func attachProgress(toViews: UIKit.UIView...)
+  open func attachProgress(toViews: [UIKit.UIView])
+  open func attachProgress(toView: UIKit.UIView)
+  open func isShowing() -> Swift.Bool
+  open func show()
+  open func dismiss()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@objc @_Concurrency.MainActor(unsafe) open class IQPreviousNextView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class ImageCheck {
+  public func blurCheck(image: CoreMedia.CMSampleBuffer, blurVariance: Swift.Int = 5) -> Swift.Bool
+  public func blurCheck(image: CoreGraphics.CGImage, blurVariance: Swift.Int = 5) -> Swift.Bool
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public struct DataGroupHash {
+  public var id: Swift.String
+  public var sodHash: Swift.String
+  public var computedHash: Swift.String
+  public var match: Swift.Bool
+}
+public struct NviModel : Swift.Codable {
+  public var documentNo: Swift.String?
+  public var dateOfBirth: Swift.String?
+  public var dateOfExpire: Swift.String?
+  public var documentNoCD: Swift.String?
+  public var dateOfBirthCD: Swift.String?
+  public var dateOfExpireCD: Swift.String?
+  public init(documentNo: Swift.String, dateOfBirth: Swift.String, dateOfExpire: Swift.String)
+  public func getMRZ() -> Swift.String
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardManager {
+  @objc final public var enableDebugging: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc final public func registerAllNotifications()
+  @objc final public func unregisterAllNotifications()
+  public struct Static {
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+public let kIQUseDefaultKeyboardDistance: CoreGraphics.CGFloat
+@available(iOSApplicationExtension, unavailable)
+@objc extension UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var keyboardDistanceFromTextField: CoreGraphics.CGFloat {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var ignoreSwitchingByNextPrevious: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var enableMode: Amani.IQEnableMode {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var shouldResignOnTouchOutsideMode: Amani.IQEnableMode {
+    @objc get
+    @objc set(newValue)
+  }
+}
+final public class ActivityData {
+  public init(size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, messageSpacing: CoreGraphics.CGFloat? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers final public class NVActivityIndicatorPresenter {
+  public static let sharedInstance: Amani.NVActivityIndicatorPresenter
+  final public func startAnimating(_ data: Amani.ActivityData)
+  final public func stopAnimating()
+  final public func setMessage(_ message: Swift.String?)
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class OpenSSLUtils {
+  public static func getOpenSSLError() -> Swift.String
+  @available(iOS 13, macOS 10.15, *)
+  public static func getPublicKeyData(from key: Swift.OpaquePointer) -> [Swift.UInt8]?
+  @available(iOS 13, macOS 10.15, *)
+  public static func decodePublicKeyFromBytes(pubKeyData: [Swift.UInt8], params: Swift.OpaquePointer) -> Swift.OpaquePointer?
+  public static func computeSharedSecret(privateKeyPair: Swift.OpaquePointer, publicKey: Swift.OpaquePointer) -> [Swift.UInt8]
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum CertificateType {
+  case documentSigningCertificate
+  case issuerSigningCertificate
+  public static func == (a: Amani.CertificateType, b: Amani.CertificateType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum CertificateItem : Swift.String {
+  case fingerprint
+  case issuerName
+  case subjectName
+  case serialNumber
+  case signatureAlgorithm
+  case publicKeyAlgorithm
+  case notBefore
+  case notAfter
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class X509Wrapper {
+  final public let cert: Swift.OpaquePointer
+  public init?(with cert: Swift.OpaquePointer?)
+  public func getItemsAsDict() -> [Amani.CertificateItem : Swift.String]
+  public func certToPEM() -> Swift.String
+  public func getFingerprint() -> Swift.String?
+  public func getNotBeforeDate() -> Swift.String?
+  public func getNotAfterDate() -> Swift.String?
+  public func getSerialNumber() -> Swift.String?
+  public func getSignatureAlgorithm() -> Swift.String?
+  public func getPublicKeyAlgorithm() -> Swift.String?
+  public func getIssuerName() -> Swift.String?
+  public func getSubjectName() -> Swift.String?
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum DataGroupId : Swift.Int, Swift.CaseIterable {
+  case COM
+  case DG1
+  case DG2
+  case DG3
+  case DG4
+  case DG5
+  case DG6
+  case DG7
+  case DG8
+  case DG9
+  case DG10
+  case DG11
+  case DG12
+  case DG13
+  case DG14
+  case DG15
+  case DG16
+  case SOD
+  case Unknown
+  public func getName() -> Swift.String
+  public static func getIDFromName(name: Swift.String) -> Amani.DataGroupId
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [Amani.DataGroupId]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [Amani.DataGroupId] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class ASN1Item : Swift.CustomDebugStringConvertible {
+  public init(line: Swift.String)
+  public func getChild(_ child: Swift.Int) -> Amani.ASN1Item?
+  public func getNumberOfChildren() -> Swift.Int
+  public var debugDescription: Swift.String {
+    get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public class SimpleASN1DumpParser {
+  public init()
+  public func parse(data: Foundation.Data) throws -> Amani.ASN1Item
+  public func test()
+  @objc deinit
+}
+@available(iOS 13, *)
+public class PACEHandler {
+  public init(cardAccess: Amani.CardAccess, tagReader: Amani.TagReader) throws
+  public func doPACE(mrzKey: Swift.String, completed: @escaping (Swift.Bool) -> ())
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+@objc extension UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func viewContainingController() -> UIKit.UIViewController?
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func topMostController() -> UIKit.UIViewController?
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func parentContainerViewController() -> UIKit.UIViewController?
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func superviewOfClassType(_ classType: UIKit.UIView.Type, belowView: UIKit.UIView? = nil) -> UIKit.UIView?
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup2 : Amani.DataGroup {
+  public var nrImages: Swift.Int {
+    get
+  }
+  public var versionNumber: Swift.Int {
+    get
+  }
+  public var lengthOfRecord: Swift.Int {
+    get
+  }
+  public var numberOfFacialImages: Swift.Int {
+    get
+  }
+  public var facialRecordDataLength: Swift.Int {
+    get
+  }
+  public var nrFeaturePoints: Swift.Int {
+    get
+  }
+  public var gender: Swift.Int {
+    get
+  }
+  public var eyeColor: Swift.Int {
+    get
+  }
+  public var hairColor: Swift.Int {
+    get
+  }
+  public var featureMask: Swift.Int {
+    get
+  }
+  public var expression: Swift.Int {
+    get
+  }
+  public var poseAngle: Swift.Int {
+    get
+  }
+  public var poseAngleUncertainty: Swift.Int {
+    get
+  }
+  public var faceImageType: Swift.Int {
+    get
+  }
+  public var imageDataType: Swift.Int {
+    get
+  }
+  public var imageWidth: Swift.Int {
+    get
+  }
+  public var imageHeight: Swift.Int {
+    get
+  }
+  public var imageColorSpace: Swift.Int {
+    get
+  }
+  public var sourceType: Swift.Int {
+    get
+  }
+  public var deviceType: Swift.Int {
+    get
+  }
+  public var quality: Swift.Int {
+    get
+  }
+  public var imageData: [Swift.UInt8] {
+    get
+  }
+  @objc deinit
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func showProgress()
+  @_Concurrency.MainActor(unsafe) public func dismissProgress()
+  @_Concurrency.MainActor(unsafe) public func updateIndicator(style: Amani.NVActivityIndicatorType)
+  @_Concurrency.MainActor(unsafe) public func updateCaption(text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public func updateColors(modalColor: UIKit.UIColor?, boxColor: UIKit.UIColor?, indicatorColor: UIKit.UIColor?, captionColor: UIKit.UIColor?)
+}
+@available(iOSApplicationExtension, unavailable)
+@objc final public class IQBarButtonItemConfiguration : ObjectiveC.NSObject {
+  @objc public init(barButtonSystemItem: UIKit.UIBarButtonItem.SystemItem, action: ObjectiveC.Selector)
+  @objc public init(image: UIKit.UIImage, action: ObjectiveC.Selector)
+  @objc public init(title: Swift.String, action: ObjectiveC.Selector)
+  final public let barButtonSystemItem: UIKit.UIBarButtonItem.SystemItem?
+  @objc final public let image: UIKit.UIImage?
+  @objc final public let title: Swift.String?
+  @objc final public let action: ObjectiveC.Selector?
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+@objc extension UIKit.UIImage {
+  @objc public static func keyboardLeftImage() -> UIKit.UIImage?
+  @objc public static func keyboardRightImage() -> UIKit.UIImage?
+  @objc public static func keyboardUpImage() -> UIKit.UIImage?
+  @objc public static func keyboardDownImage() -> UIKit.UIImage?
+  @objc public static func keyboardPreviousImage() -> UIKit.UIImage?
+  @objc public static func keyboardNextImage() -> UIKit.UIImage?
+}
+@available(iOSApplicationExtension, unavailable)
+@objc extension UIKit.UIView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var keyboardToolbar: Amani.IQToolbar {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var shouldHideToolbarPlaceholder: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var toolbarPlaceholder: Swift.String? {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var drawingToolbarPlaceholder: Swift.String? {
+    @objc get
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addKeyboardToolbarWithTarget(target: Swift.AnyObject?, titleText: Swift.String?, rightBarButtonConfiguration: Amani.IQBarButtonItemConfiguration?, previousBarButtonConfiguration: Amani.IQBarButtonItemConfiguration? = nil, nextBarButtonConfiguration: Amani.IQBarButtonItemConfiguration? = nil)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, action: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, action: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightButtonOnKeyboardWithImage(_ image: UIKit.UIImage, target: Swift.AnyObject?, action: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightButtonOnKeyboardWithImage(_ image: UIKit.UIImage, target: Swift.AnyObject?, action: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightButtonOnKeyboardWithText(_ text: Swift.String, target: Swift.AnyObject?, action: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightButtonOnKeyboardWithText(_ text: Swift.String, target: Swift.AnyObject?, action: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addCancelDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, cancelAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonTitle: Swift.String, rightButtonTitle: Swift.String, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonImage: UIKit.UIImage, rightButtonImage: UIKit.UIImage, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addCancelDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, cancelAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonTitle: Swift.String, rightButtonTitle: Swift.String, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addRightLeftOnKeyboardWithTarget(_ target: Swift.AnyObject?, leftButtonImage: UIKit.UIImage, rightButtonImage: UIKit.UIImage, leftButtonAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addPreviousNextDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonImage: UIKit.UIImage, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonTitle: Swift.String, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, shouldShowPlaceholder: Swift.Bool = false)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addPreviousNextDoneOnKeyboardWithTarget(_ target: Swift.AnyObject?, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, doneAction: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonImage: UIKit.UIImage, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) dynamic public func addPreviousNextRightOnKeyboardWithTarget(_ target: Swift.AnyObject?, rightButtonTitle: Swift.String, previousAction: ObjectiveC.Selector, nextAction: ObjectiveC.Selector, rightButtonAction: ObjectiveC.Selector, titleText: Swift.String?)
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ChipAuthenticationInfo : Amani.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getKeyId() -> Swift.Int
+  public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+extension UIKit.UINavigationController {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var shouldAutorotate: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum DocTypeEnum : Swift.String {
+  case TD1
+  case TD2
+  case OTHER
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup1 : Amani.DataGroup {
+  public var elements: [Swift.String : Swift.String] {
+    get
+  }
+  @objc deinit
+}
+public struct NetworkError : Swift.Codable, Swift.Error {
+  public var error_code: Swift.Int!
+  public var error_message: Swift.String?
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+public struct ResponseData {
+  public var statusCode: Swift.Int
+  public var data: Foundation.Data
+}
+public typealias HTTPHeaders = [Swift.String : Swift.String]
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+@objc final public class IQKeyboardManager : ObjectiveC.NSObject {
+  @objc public static let shared: Amani.IQKeyboardManager
+  @objc final public var enable: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public var keyboardDistanceFromTextField: CoreGraphics.CGFloat
+  @objc final public var enableAutoToolbar: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public var toolbarManageBehaviour: Amani.IQAutoToolbarManageBehaviour
+  @objc final public var shouldToolbarUsesTextFieldTintColor: Swift.Bool
+  @objc final public var toolbarTintColor: UIKit.UIColor?
+  @objc final public var toolbarBarTintColor: UIKit.UIColor?
+  @objc final public var previousNextDisplayMode: Amani.IQPreviousNextDisplayMode
+  @objc final public var toolbarPreviousBarButtonItemImage: UIKit.UIImage?
+  @objc final public var toolbarNextBarButtonItemImage: UIKit.UIImage?
+  @objc final public var toolbarDoneBarButtonItemImage: UIKit.UIImage?
+  @objc final public var toolbarPreviousBarButtonItemText: Swift.String?
+  @objc final public var toolbarPreviousBarButtonItemAccessibilityLabel: Swift.String?
+  @objc final public var toolbarNextBarButtonItemText: Swift.String?
+  @objc final public var toolbarNextBarButtonItemAccessibilityLabel: Swift.String?
+  @objc final public var toolbarDoneBarButtonItemText: Swift.String?
+  @objc final public var toolbarDoneBarButtonItemAccessibilityLabel: Swift.String?
+  @objc final public var shouldShowToolbarPlaceholder: Swift.Bool
+  @objc final public var placeholderFont: UIKit.UIFont?
+  @objc final public var placeholderColor: UIKit.UIColor?
+  @objc final public var placeholderButtonColor: UIKit.UIColor?
+  @objc final public var overrideKeyboardAppearance: Swift.Bool
+  @objc final public var keyboardAppearance: UIKit.UIKeyboardAppearance
+  @objc final public var shouldResignOnTouchOutside: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc final public var resignFirstResponderGesture: UIKit.UITapGestureRecognizer {
+    @objc get
+    @objc set
+  }
+  @discardableResult
+  @objc final public func resignFirstResponder() -> Swift.Bool
+  @objc final public var shouldPlayInputClicks: Swift.Bool
+  @objc final public var layoutIfNeededOnUpdate: Swift.Bool
+  @objc final public var disabledDistanceHandlingClasses: [UIKit.UIViewController.Type]
+  @objc final public var enabledDistanceHandlingClasses: [UIKit.UIViewController.Type]
+  @objc final public var disabledToolbarClasses: [UIKit.UIViewController.Type]
+  @objc final public var enabledToolbarClasses: [UIKit.UIViewController.Type]
+  @objc final public var toolbarPreviousNextAllowedClasses: [UIKit.UIView.Type]
+  @objc final public var disabledTouchResignedClasses: [UIKit.UIViewController.Type]
+  @objc final public var enabledTouchResignedClasses: [UIKit.UIViewController.Type]
+  @objc final public var touchResignedGestureIgnoreClasses: [UIKit.UIView.Type]
+  @objc final public func registerTextFieldViewClass(_ aClass: UIKit.UIView.Type, didBeginEditingNotificationName: Swift.String, didEndEditingNotificationName: Swift.String)
+  @objc final public func unregisterTextFieldViewClass(_ aClass: UIKit.UIView.Type, didBeginEditingNotificationName: Swift.String, didEndEditingNotificationName: Swift.String)
+  @objc deinit
+  @objc final public func reloadLayoutIfNeeded()
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardManager : UIKit.UIGestureRecognizerDelegate {
+  @objc @_Concurrency.MainActor(unsafe) final public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @objc @_Concurrency.MainActor(unsafe) final public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+}
+public enum NVActivityIndicatorType : Swift.Int {
+  case blank
+  case ballPulse
+  case ballGridPulse
+  case ballClipRotate
+  case squareSpin
+  case ballClipRotatePulse
+  case ballClipRotateMultiple
+  case ballPulseRise
+  case ballRotate
+  case cubeTransition
+  case ballZigZag
+  case ballZigZagDeflect
+  case ballTrianglePath
+  case ballScale
+  case lineScale
+  case lineScaleParty
+  case ballScaleMultiple
+  case ballPulseSync
+  case ballBeat
+  case lineScalePulseOut
+  case lineScalePulseOutRapid
+  case ballScaleRipple
+  case ballScaleRippleMultiple
+  case ballSpinFadeLoader
+  case lineSpinFadeLoader
+  case triangleSkewSpin
+  case pacman
+  case ballGridBeat
+  case semiCircleSpin
+  case ballRotateChase
+  case orbit
+  case audioEqualizer
+  case circleStrokeSpin
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc @_Concurrency.MainActor(unsafe) final public class NVActivityIndicatorView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TYPE: Amani.NVActivityIndicatorType
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_TEXT_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_PADDING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_SIZE: CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_DISPLAY_TIME_THRESHOLD: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MINIMUM_DISPLAY_TIME: Swift.Int
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE: Swift.String?
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_SPACING: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_MESSAGE_FONT: UIKit.UIFont
+  @_Concurrency.MainActor(unsafe) public static var DEFAULT_BLOCKER_BACKGROUND_COLOR: UIKit.UIColor
+  @_Concurrency.MainActor(unsafe) final public var type: Amani.NVActivityIndicatorType
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var color: UIKit.UIColor
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) final public var padding: CoreGraphics.CGFloat
+  @_Concurrency.MainActor(unsafe) final public var animating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) final public var isAnimating: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreGraphics.CGRect, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil)
+  @_Concurrency.MainActor(unsafe) @objc override final public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override final public var bounds: CoreGraphics.CGRect {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) final public func startAnimating()
+  @_Concurrency.MainActor(unsafe) final public func stopAnimating()
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+@objc extension UIKit.UIViewController {
+  @objc @_Concurrency.MainActor(unsafe) dynamic open func parentIQContainerViewController() -> UIKit.UIViewController?
+  @objc @available(*, deprecated, message: "Due to change in core-logic of handling distance between textField and keyboard distance, this layout contraint tweak is no longer needed and things will just work out of the box regardless of constraint pinned with safeArea/layoutGuide/superview.")
+  @IBOutlet @_Concurrency.MainActor(unsafe) dynamic public var IQLayoutGuideConstraint: UIKit.NSLayoutConstraint? {
+    @objc get
+    @objc set(newValue)
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ChipAuthenticationPublicKeyInfo : Amani.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getKeyId() -> Swift.Int
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum NFCViewDisplayMessage {
+  case requestPresentPassport
+  case authenticatingWithPassport(Swift.Int)
+  case readingDataGroupProgress(Amani.DataGroupId, Swift.Int)
+  case error(Amani.NFCPassportReaderError)
+  case successfulRead
+}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.NFCViewDisplayMessage {
+  public var description: Swift.String {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, *)
+public class TagReader {
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class SignDocument {
+  public func generateHMACSignature(SharedSecret: Swift.String, RequestMethod: Swift.String, RequestPath: Swift.String, RequestBody: Swift.String, algorithm: Amani.SignDocument.HMACAlgo = .SHA256) -> Swift.String
+  public enum HMACAlgo {
+    case MD5, SHA1, SHA224, SHA256, SHA384, SHA512
+    public static func == (a: Amani.SignDocument.HMACAlgo, b: Amani.SignDocument.HMACAlgo) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  @objc deinit
+}
+public func binToHexRep(_ val: [Swift.UInt8], asArray: Swift.Bool = false) -> Swift.String
+public func binToHexRep(_ val: Swift.UInt8) -> Swift.String
+public func binToHex(_ val: Swift.UInt8) -> Swift.Int
+public func binToHex(_ val: [Swift.UInt8]) -> Swift.UInt64
+public func binToHex(_ val: Swift.ArraySlice<Swift.UInt8>) -> Swift.UInt64
+public func hexToBin(_ val: Swift.UInt64) -> [Swift.UInt8]
+public func binToInt(_ val: Swift.ArraySlice<Swift.UInt8>) -> Swift.Int
+public func binToInt(_ val: [Swift.UInt8]) -> Swift.Int
+public func intToBin(_ data: Swift.Int, pad: Swift.Int = 2) -> [Swift.UInt8]
+public func hexRepToBin(_ val: Swift.String) -> [Swift.UInt8]
+public func xor(_ kifd: [Swift.UInt8], _ response_kicc: [Swift.UInt8]) -> [Swift.UInt8]
+public func generateRandomUInt8Array(_ size: Swift.Int) -> [Swift.UInt8]
+public func pad(_ toPad: [Swift.UInt8], blockSize: Swift.Int) -> [Swift.UInt8]
+public func unpad(_ tounpad: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func mac(algoName: Amani.SecureMessagingSupportedAlgorithms, key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func desMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func aesMAC(key: [Swift.UInt8], msg: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func wrapDO(b: Swift.UInt8, arr: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func unwrapDO(tag: Swift.UInt8, wrappedData: [Swift.UInt8]) throws -> [Swift.UInt8]
+public func intToBytes(val: Swift.Int, removePadding: Swift.Bool) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func oidToBytes(oid: Swift.String, replaceTag: Swift.Bool) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: Swift.ArraySlice<Swift.UInt8>) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func asn1Length(_ data: [Swift.UInt8]) throws -> (Swift.Int, Swift.Int)
+@available(iOS 13, macOS 10.15, *)
+public func toAsn1Length(_ data: Swift.Int) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcHash(data: [Swift.UInt8], hashAlgorithm: Swift.String) throws -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA1Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA224Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA256Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA512Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func calcSHA384Hash(_ data: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardManager {
+  @objc final public var keyboardShowing: Swift.Bool {
+    @objc get
+  }
+}
+@available(iOS 13, *)
+public struct ResponseAPDU {
+  public var data: [Swift.UInt8]
+  public var sw1: Swift.UInt8
+  public var sw2: Swift.UInt8
+  public init(data: [Swift.UInt8], sw1: Swift.UInt8, sw2: Swift.UInt8)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class NotImplementedDG : Amani.DataGroup {
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup15 : Amani.DataGroup {
+  public var rsaPublicKey: Swift.OpaquePointer? {
+    get
+  }
+  public var ecdsaPublicKey: Swift.OpaquePointer? {
+    get
+  }
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public func AESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func AESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func AESECBEncrypt(key: [Swift.UInt8], message: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func tripleDESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func tripleDESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8]) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func DESEncrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
+@available(iOS 13, macOS 10.15, *)
+public func DESDecrypt(key: [Swift.UInt8], message: [Swift.UInt8], iv: [Swift.UInt8], options: Swift.UInt32 = 0) -> [Swift.UInt8]
+public enum PACEMappingType {
+  case GM
+  case IM
+  case CAM
+  public static func == (a: Amani.PACEMappingType, b: Amani.PACEMappingType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class PACEInfo : Amani.SecurityInfo {
+  public static let PARAM_ID_GFP_1024_160: Swift.Int
+  public static let PARAM_ID_GFP_2048_224: Swift.Int
+  public static let PARAM_ID_GFP_2048_256: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P192_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P224_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P256_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P320_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P384_R1: Swift.Int
+  public static let PARAM_ID_ECP_BRAINPOOL_P512_R1: Swift.Int
+  public static let PARAM_ID_ECP_NIST_P521_R1: Swift.Int
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getVersion() -> Swift.Int
+  public func getParameterId() -> Swift.Int?
+  public func getParameterSpec() throws -> Swift.Int32
+  public func getMappingType() throws -> Amani.PACEMappingType
+  public func getKeyAgreementAlgorithm() throws -> Swift.String
+  public func getCipherAlgorithm() throws -> Swift.String
+  public func getDigestAlgorithm() throws -> Swift.String
+  public func getKeyLength() throws -> Swift.Int
+  public func createMappingKey() throws -> Swift.OpaquePointer
+  public static func getParameterSpec(stdDomainParam: Swift.Int) throws -> Swift.Int32
+  public static func toMappingType(oid: Swift.String) throws -> Amani.PACEMappingType
+  public static func toKeyAgreementAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toCipherAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toDigestAlgorithm(oid: Swift.String) throws -> Swift.String
+  public static func toKeyLength(oid: Swift.String) throws -> Swift.Int
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@objc @_Concurrency.MainActor(unsafe) open class IQTextView : UIKit.UITextView {
+  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+  @objc override dynamic open func awakeFromNib()
+  @objc deinit
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderTextColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholder: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) open var attributedPlaceholder: Foundation.NSAttributedString? {
+    get
+    set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var text: Swift.String! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var attributedText: Foundation.NSAttributedString! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var font: UIKit.UIFont? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var textAlignment: UIKit.NSTextAlignment {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override weak dynamic open var delegate: UIKit.UITextViewDelegate? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+}
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class CardAccess {
+  public var securityInfos: [Amani.SecurityInfo] {
+    get
+  }
+  @objc deinit
+}
+public protocol NVActivityIndicatorViewable {
+}
+extension Amani.NVActivityIndicatorViewable where Self : UIKit.UIViewController {
+  public func startAnimating(_ size: CoreGraphics.CGSize? = nil, message: Swift.String? = nil, messageFont: UIKit.UIFont? = nil, type: Amani.NVActivityIndicatorType? = nil, color: UIKit.UIColor? = nil, padding: CoreGraphics.CGFloat? = nil, displayTimeThreshold: Swift.Int? = nil, minimumDisplayTime: Swift.Int? = nil, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil)
+  public func stopAnimating()
+}
+public enum SecureMessagingSupportedAlgorithms {
+  case DES
+  case AES
+  public static func == (a: Amani.SecureMessagingSupportedAlgorithms, b: Amani.SecureMessagingSupportedAlgorithms) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, *)
+public class SecureMessaging {
+  public init(encryptionAlgorithm: Amani.SecureMessagingSupportedAlgorithms = .DES, ksenc: [Swift.UInt8], ksmac: [Swift.UInt8], ssc: [Swift.UInt8])
+  @objc deinit
+}
+@available(iOS 13, macOS 10.15, *)
+public enum NFCPassportReaderError : Swift.Error {
+  case ResponseError(Swift.String, Swift.UInt8, Swift.UInt8)
+  case InvalidResponse
+  case UnexpectedError
+  case NFCNotSupported
+  case NoConnectedTag
+  case D087Malformed
+  case InvalidResponseChecksum
+  case MissingMandatoryFields
+  case CannotDecodeASN1Length
+  case InvalidASN1Value
+  case UnableToProtectAPDU
+  case UnableToUnprotectAPDU
+  case UnsupportedDataGroup
+  case DataGroupNotRead
+  case UnknownTag
+  case UnknownImageFormat
+  case NotImplemented
+  case TagNotValid
+  case ConnectionError
+  case UserCanceled
+  case InvalidMRZKey
+  case MoreThanOneTagFound
+  case InvalidHashAlgorithmSpecified
+  case InvalidDataPassed(Swift.String)
+  case NotYetSupported(Swift.String)
+}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.NFCPassportReaderError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public enum OpenSSLError : Swift.Error {
+  case UnableToGetX509CertificateFromPKCS7(Swift.String)
+  case UnableToVerifyX509CertificateForSOD(Swift.String)
+  case VerifyAndReturnSODEncapsulatedData(Swift.String)
+  case UnableToReadECPublicKey(Swift.String)
+  case UnableToExtractSignedDataFromPKCS7(Swift.String)
+  case VerifySignedAttributes(Swift.String)
+  case UnableToParseASN1(Swift.String)
+  case UnableToDecryptRSASignature(Swift.String)
+}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.OpenSSLError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PassiveAuthenticationError : Swift.Error {
+  case UnableToParseSODHashes(Swift.String)
+  case InvalidDataGroupHash(Swift.String)
+  case SODMissing(Swift.String)
+}
+extension Amani.PassiveAuthenticationError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
+@objc @_Concurrency.MainActor(unsafe) open class IQBarButtonItem : UIKit.UIBarButtonItem {
+  @objc override dynamic public init()
+  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var tintColor: UIKit.UIColor? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open func setTarget(_ target: Swift.AnyObject?, action: ObjectiveC.Selector?)
+  @objc @_Concurrency.MainActor(unsafe) open var invocation: Amani.IQInvocation?
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardManager {
+  @objc final public func reloadInputViews()
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardManager {
+  @objc final public var canGoPrevious: Swift.Bool {
+    @objc get
+  }
+  @objc final public var canGoNext: Swift.Bool {
+    @objc get
+  }
+  @discardableResult
+  @objc final public func goPrevious() -> Swift.Bool
+  @discardableResult
+  @objc final public func goNext() -> Swift.Bool
+}
+public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashable {
+  public static let connect: Amani.HTTPMethod
+  public static let delete: Amani.HTTPMethod
+  public static let get: Amani.HTTPMethod
+  public static let head: Amani.HTTPMethod
+  public static let options: Amani.HTTPMethod
+  public static let patch: Amani.HTTPMethod
+  public static let post: Amani.HTTPMethod
+  public static let put: Amani.HTTPMethod
+  public static let trace: Amani.HTTPMethod
+  public let rawValue: Swift.String
+  public init(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+@objc @_Concurrency.MainActor(unsafe) open class IQToolbar : UIKit.UIToolbar, UIKit.UIInputViewAudioFeedback {
+  @objc @_Concurrency.MainActor(unsafe) open var previousBarButton: Amani.IQBarButtonItem {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var nextBarButton: Amani.IQBarButtonItem {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var titleBarButton: Amani.IQTitleBarButtonItem {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var doneBarButton: Amani.IQBarButtonItem {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var fixedSpaceBarButton: Amani.IQBarButtonItem {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var tintColor: UIKit.UIColor! {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open func layoutSubviews()
+  @objc @_Concurrency.MainActor(unsafe) open var enableInputClicksWhenVisible: Swift.Bool {
+    @objc get
+  }
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+@_Concurrency.MainActor(unsafe) open class IQTitleBarButtonItem : Amani.IQBarButtonItem {
+  @objc @_Concurrency.MainActor(unsafe) open var titleFont: UIKit.UIFont? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override dynamic open var title: Swift.String? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var titleColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) open var selectableTitleColor: UIKit.UIColor? {
+    @objc get
+    @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) override open var invocation: Amani.IQInvocation? {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
+  @objc @_Concurrency.MainActor(unsafe) convenience public init(title: Swift.String?)
+  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+public struct CustomerDetailModel : Swift.Codable {
+  public func encode(to encoder: Swift.Encoder) throws
+  public init(from decoder: Swift.Decoder) throws
+}
+@available(iOSApplicationExtension, unavailable)
+@objc extension UIKit.UIScrollView {
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var shouldIgnoreScrollingAdjustment: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var shouldIgnoreContentInsetAdjustment: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+  @objc @_Concurrency.MainActor(unsafe) dynamic public var shouldRestoreScrollViewContentOffset: Swift.Bool {
+    @objc get
+    @objc set(newValue)
+  }
+}
+public protocol AmaniSDKDelegate : AnyObject {
+  func onKYCSuccess(CustomerId: Swift.Int)
+  func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
+  func onTokenExpired()
+  func onNoInternetConnection()
+  func onEvent(name: Swift.String, Parameters: [Swift.String]?, type: Swift.String)
+}
+public enum EventType : Swift.String {
+  case buttonPressed
+  case upload
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum EventParams : Swift.String {
+  case nviDataNull
+  case iOSVersion
+  case CoreNFCCantImport
+  case ManualCrop
+  case Confirm
+  case TryAgain
+  case BackButton
+  case TakePhoto
+  case WithNfc
+  case Clear
+  case Readbtn
+  case Continuebtn
+  case Uploadbtn
+  case Downloadbtn
+  case Error
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 11, *)
+final public class AmaniSDK : ObjectiveC.NSObject {
+  public static let sharedInstance: Amani.AmaniSDK
+  final public let version: Swift.String
+  final public func set(server: Swift.String, userName: Swift.String, password: Swift.String, customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, sharedSecret: Swift.String? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr", country: Swift.String? = nil)
+  final public func set(server: Swift.String, token: Swift.String, customer: Amani.CustomerRequestModel, nvi: Amani.NviModel? = nil, sharedSecret: Swift.String? = nil, useGeoLocation: Swift.Bool = true, language: Swift.String = "tr", country: Swift.String? = nil)
+  final public func setFont(fontName: Swift.String = "")
+  final public func showSDK(overParent parentViewController: UIKit.UIViewController)
+  final public func setDelegate(delegate: Amani.AmaniSDKDelegate)
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+@objc final public class IQInvocation : ObjectiveC.NSObject {
+  @objc weak final public var target: Swift.AnyObject?
+  @objc final public var action: ObjectiveC.Selector
+  @objc public init(_ target: Swift.AnyObject, _ action: ObjectiveC.Selector)
+  @objc final public func invoke(from: Any)
+  @objc deinit
+}
+public enum LogLevel : Swift.Int, Swift.CaseIterable {
+  case verbose
+  case debug
+  case info
+  case warning
+  case error
+  public init?(rawValue: Swift.Int)
+  public typealias AllCases = [Amani.LogLevel]
+  public typealias RawValue = Swift.Int
+  public static var allCases: [Amani.LogLevel] {
+    get
+  }
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Log {
+  public static var logLevel: Amani.LogLevel
+  public static var storeLogs: Swift.Bool
+  public static var logData: [Swift.String]
+  public class func verbose(_ msg: @autoclosure () -> Swift.String)
+  public class func debug(_ msg: @autoclosure () -> Swift.String)
+  public class func info(_ msg: @autoclosure () -> Swift.String)
+  public class func warning(_ msg: @autoclosure () -> Swift.String)
+  public class func error(_ msg: @autoclosure () -> Swift.String)
+  public class func clearStoredLogs()
+  @objc deinit
+}
+@available(iOS 13, *)
+public class BACHandler {
+  public var ksenc: [Swift.UInt8]
+  public var ksmac: [Swift.UInt8]
+  public var kifd: [Swift.UInt8]
+  public init()
+  public init(tagReader: Amani.TagReader)
+  public func performBACAndGetSessionKeys(mrzKey: Swift.String, completed: @escaping (_ error: Amani.NFCPassportReaderError?) -> ())
+  public func sessionKeys(data: [Swift.UInt8]) throws -> ([Swift.UInt8], [Swift.UInt8], [Swift.UInt8])
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class COM : Amani.DataGroup {
+  public var version: Swift.String {
+    get
+  }
+  public var unicodeVersion: Swift.String {
+    get
+  }
+  public var dataGroupsPresent: [Swift.String] {
+    get
+  }
+  @objc deinit
+}
+public enum poseState : Swift.String {
+  case faceTooBig
+  case faceTooSmall
+  case faceIsOk
+  case closedEyes
+  case notInArea
+  case wrongPose
+  case phonePitch
+  case turnedRight
+  case turnedLeft
+  case turnedUp
+  case turnedDown
+  case straightFace
+  case sonraki
+  case completed
+  case errorMessage
+  case tekrarDene
+  case errorTitle
+  case confirm
+  case informationScreenDesc1
+  case informationScreenDesc2
+  case informationScreenTitle
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum poseConfigState : Swift.String {
+  case ovalBorderColor
+  case ovalBorderSuccessColor
+  case primaryButtonBackgroundColor
+  case primartButtonTextColor
+  case primaryButtonBorderColor
+  case secondaryButtonBackgroundColor
+  case secondaryButtonTextColor
+  case secondaryButtonBorderColor
+  case buttonRadius
+  case appFontColor
+  case appBackgroundColor
+  case poseCount
+  case showOnlyArrow
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQKeyboardManager {
+  @objc final public var movedDistance: CoreGraphics.CGFloat {
+    @objc get
+  }
+  @objc final public var movedDistanceChanged: ((CoreGraphics.CGFloat) -> Swift.Void)? {
+    @objc get
+    @objc set(newValue)
+  }
+}
+@objc public protocol iProgressHUDDelegete {
+  @objc optional func onTouch(view: UIKit.UIView)
+  @objc optional func onShow(view: UIKit.UIView)
+  @objc optional func onDismiss(view: UIKit.UIView)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup12 : Amani.DataGroup {
+  public var issuingAuthority: Swift.String? {
+    get
+  }
+  public var dateOfIssue: Swift.String? {
+    get
+  }
+  public var otherPersonsDetails: Swift.String? {
+    get
+  }
+  public var endorsementsOrObservations: Swift.String? {
+    get
+  }
+  public var taxOrExitRequirements: Swift.String? {
+    get
+  }
+  public var frontImage: [Swift.UInt8]? {
+    get
+  }
+  public var rearImage: [Swift.UInt8]? {
+    get
+  }
+  public var personalizationTime: Swift.String? {
+    get
+  }
+  public var personalizationDeviceSerialNr: Swift.String? {
+    get
+  }
+  @objc deinit
+}
+public struct ClientInfoModel {
+  public var serverURL: Swift.String!
+  public var appKey: Swift.String!
+  public var appPwd: Swift.String!
+  public var appToken: Swift.String!
+  public var customer: Amani.CustomerRequestModel!
+  public var nviData: Amani.NviModel?
+  public init(serverURL: Swift.String, appKey: Swift.String, appPwd: Swift.String, customer: Amani.CustomerRequestModel, nviData: Amani.NviModel? = nil)
+  public init(serverURL: Swift.String, appToken: Swift.String, customer: Amani.CustomerRequestModel, nviData: Amani.NviModel? = nil)
+}
+public enum PassportAuthenticationStatus {
+  case notDone
+  case success
+  case failed
+  public static func == (a: Amani.PassportAuthenticationStatus, b: Amani.PassportAuthenticationStatus) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@available(iOS 13, macOS 10.15, *)
+public class NFCPassportModel {
+  public var documentType: Swift.String {
+    get
+  }
+  public var documentSubType: Swift.String {
+    get
+  }
+  public var personalNumber: Swift.String {
+    get
+  }
+  public var documentNumber: Swift.String {
+    get
+  }
+  public var issuingAuthority: Swift.String {
+    get
+  }
+  public var documentExpiryDate: Swift.String {
+    get
+  }
+  public var dateOfBirth: Swift.String {
+    get
+  }
+  public var gender: Swift.String {
+    get
+  }
+  public var nationality: Swift.String {
+    get
+  }
+  public var lastName: Swift.String {
+    get
+  }
+  public var firstName: Swift.String {
+    get
+  }
+  public var passportMRZ: Swift.String {
+    get
+  }
+  public var placeOfBirth: Swift.String? {
+    get
+  }
+  public var residenceAddress: Swift.String? {
+    get
+  }
+  public var phoneNumber: Swift.String? {
+    get
+  }
+  public var documentSigningCertificate: Amani.X509Wrapper? {
+    get
+  }
+  public var countrySigningCertificate: Amani.X509Wrapper? {
+    get
+  }
+  public var LDSVersion: Swift.String {
+    get
+  }
+  public var dataGroupsPresent: [Swift.String] {
+    get
+  }
+  public var dataGroupsAvailable: [Amani.DataGroupId] {
+    get
+  }
+  public var dataGroupsRead: [Amani.DataGroupId : Amani.DataGroup] {
+    get
+  }
+  public var dataGroupHashes: [Amani.DataGroupId : Amani.DataGroupHash] {
+    get
+  }
+  public var cardAccess: Amani.CardAccess? {
+    get
+  }
+  public var BACStatus: Amani.PassportAuthenticationStatus {
+    get
+  }
+  public var PACEStatus: Amani.PassportAuthenticationStatus {
+    get
+  }
+  public var chipAuthenticationStatus: Amani.PassportAuthenticationStatus {
+    get
+  }
+  public var passportCorrectlySigned: Swift.Bool {
+    get
+  }
+  public var documentSigningCertificateVerified: Swift.Bool {
+    get
+  }
+  public var passportDataNotTampered: Swift.Bool {
+    get
+  }
+  public var activeAuthenticationPassed: Swift.Bool {
+    get
+  }
+  public var activeAuthenticationChallenge: [Swift.UInt8] {
+    get
+  }
+  public var activeAuthenticationSignature: [Swift.UInt8] {
+    get
+  }
+  public var verificationErrors: [Swift.Error] {
+    get
+  }
+  public var isPACESupported: Swift.Bool {
+    get
+  }
+  public var isChipAuthenticationSupported: Swift.Bool {
+    get
+  }
+  public var passportImage: UIKit.UIImage? {
+    get
+  }
+  public var signatureImage: UIKit.UIImage? {
+    get
+  }
+  public var activeAuthenticationSupported: Swift.Bool {
+    get
+  }
+  public init()
+  public init(from dump: [Swift.String : Swift.String])
+  public func addDataGroup(_ id: Amani.DataGroupId, dataGroup: Amani.DataGroup)
+  public func getDataGroup(_ id: Amani.DataGroupId) -> Amani.DataGroup?
+  public func dumpPassportData(selectedDataGroups: [Amani.DataGroupId], includeActiveAuthenticationData: Swift.Bool = false) -> [Swift.String : Swift.String]
+  public func getHashesForDatagroups(hashAlgorythm: Swift.String) -> [Amani.DataGroupId : [Swift.UInt8]]
+  public func verifyPassport(masterListURL: Foundation.URL?, useCMSVerification: Swift.Bool = false)
+  public func verifyActiveAuthentication(challenge: [Swift.UInt8], signature: [Swift.UInt8])
+  @objc deinit
+}
+public enum infoState : Swift.String {
+  case faceTooBig
+  case faceTooSmall
+  case faceIsOk
+  case notInArea
+  case completed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum configState : Swift.String {
+  case ovalBorderColor
+  case ovalBorderSuccessColor
+  case appFontColor
+  case appBackgroundColor
+  case countTimer
+  case primaryButtonBackgroundColor
+  case primartButtonTextColor
+  case primaryButtonBorderColor
+  case secondaryButtonBackgroundColor
+  case secondaryButtonTextColor
+  case secondaryButtonBorderColor
+  case buttonRadius
+  case countDownValue
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class DataGroup14 : Amani.DataGroup {
+  public var securityInfos: [Amani.SecurityInfo] {
+    get
+  }
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQAutoToolbarManageBehaviour : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQAutoToolbarManageBehaviour : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQAutoToolbarManageBehaviour : Swift.RawRepresentable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQPreviousNextDisplayMode : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQPreviousNextDisplayMode : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQPreviousNextDisplayMode : Swift.RawRepresentable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQEnableMode : Swift.Equatable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQEnableMode : Swift.Hashable {}
+@available(iOSApplicationExtension, unavailable)
+extension Amani.IQEnableMode : Swift.RawRepresentable {}
+extension Amani.iProgressHUDStyles : Swift.Equatable {}
+extension Amani.iProgressHUDStyles : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.CertificateType : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.CertificateType : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.CertificateItem : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.CertificateItem : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.CertificateItem : Swift.RawRepresentable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.DataGroupId : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.DataGroupId : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.DataGroupId : Swift.RawRepresentable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.DocTypeEnum : Swift.Equatable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.DocTypeEnum : Swift.Hashable {}
+@available(iOS 13, macOS 10.15, *)
+extension Amani.DocTypeEnum : Swift.RawRepresentable {}
+extension Amani.NVActivityIndicatorType : Swift.Equatable {}
+extension Amani.NVActivityIndicatorType : Swift.Hashable {}
+extension Amani.NVActivityIndicatorType : Swift.RawRepresentable {}
+extension Amani.SignDocument.HMACAlgo : Swift.Equatable {}
+extension Amani.SignDocument.HMACAlgo : Swift.Hashable {}
+extension Amani.PACEMappingType : Swift.Equatable {}
+extension Amani.PACEMappingType : Swift.Hashable {}
+extension Amani.SecureMessagingSupportedAlgorithms : Swift.Equatable {}
+extension Amani.SecureMessagingSupportedAlgorithms : Swift.Hashable {}
+extension Amani.EventType : Swift.Equatable {}
+extension Amani.EventType : Swift.Hashable {}
+extension Amani.EventType : Swift.RawRepresentable {}
+extension Amani.EventParams : Swift.Equatable {}
+extension Amani.EventParams : Swift.Hashable {}
+extension Amani.EventParams : Swift.RawRepresentable {}
+extension Amani.LogLevel : Swift.Equatable {}
+extension Amani.LogLevel : Swift.Hashable {}
+extension Amani.LogLevel : Swift.RawRepresentable {}
+extension Amani.poseState : Swift.Equatable {}
+extension Amani.poseState : Swift.Hashable {}
+extension Amani.poseState : Swift.RawRepresentable {}
+extension Amani.poseConfigState : Swift.Equatable {}
+extension Amani.poseConfigState : Swift.Hashable {}
+extension Amani.poseConfigState : Swift.RawRepresentable {}
+extension Amani.PassportAuthenticationStatus : Swift.Equatable {}
+extension Amani.PassportAuthenticationStatus : Swift.Hashable {}
+extension Amani.infoState : Swift.Equatable {}
+extension Amani.infoState : Swift.Hashable {}
+extension Amani.infoState : Swift.RawRepresentable {}
+extension Amani.configState : Swift.Equatable {}
+extension Amani.configState : Swift.Hashable {}
+extension Amani.configState : Swift.RawRepresentable {}

@@ -1,0 +1,33 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ColendiWebViewSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Amani
+@_exported import ColendiWebViewSDK
+import Foundation
+import Swift
+import UIKit
+import WebKit
+import _Concurrency
+import _StringProcessing
+public protocol ColendiWebViewDelegate : AnyObject {
+  func messageCallback(message: Swift.String)
+}
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ColendiWebView : UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public func loadUrl(url: Foundation.URL)
+  @_Concurrency.MainActor(unsafe) public func setDelegate(delegate: ColendiWebViewSDK.ColendiWebViewDelegate)
+  @_Concurrency.MainActor(unsafe) public func sendMessage(message: Swift.String)
+  @objc deinit
+}
+extension ColendiWebViewSDK.ColendiWebView : WebKit.WKScriptMessageHandler {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension ColendiWebViewSDK.ColendiWebView : Amani.AmaniSDKDelegate {
+  @_Concurrency.MainActor(unsafe) public func onKYCSuccess(CustomerId: Swift.Int)
+  @_Concurrency.MainActor(unsafe) public func onKYCFailed(CustomerId: Swift.Int, Rules: [[Swift.String : Swift.String]]?)
+  @_Concurrency.MainActor(unsafe) public func onTokenExpired()
+  @_Concurrency.MainActor(unsafe) public func onNoInternetConnection()
+  @_Concurrency.MainActor(unsafe) public func onEvent(name: Swift.String, Parameters: [Swift.String]?, type: Swift.String)
+}
