@@ -14,10 +14,11 @@ Pod::Spec.new do |s|
   s.source           = { :git => 'https://github.com/colendi-project/ColendiWebViewSDK-IOS.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/colendiapp'
 
+  s.swift_version = '4.0'
   s.ios.deployment_target = '11.0'
   
-   s.ios.vendored_frameworks = 'ColendiWebViewSDK.xcframework', 'Amani.xcframework'
-   s.dependency 'lottie-ios', '~> 3.3.0'
-   s.dependency 'OpenSSL-Universal', '~> 1.1.1100'
+  s.ios.vendored_frameworks = 'ColendiWebViewSDK.xcframework', 'Amani.xcframework'
+  s.dependency 'lottie-ios', '~> 3.3.0'
+  s.dependency 'OpenSSL-Universal', '~> 1.1.1100'
   
 end
