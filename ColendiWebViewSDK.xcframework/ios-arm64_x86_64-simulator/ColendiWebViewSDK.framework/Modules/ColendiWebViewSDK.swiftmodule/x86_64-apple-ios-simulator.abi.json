@@ -1016,7 +1016,7 @@
       "kind": "StringLiteral",
       "offset": 186,
       "length": 7,
-      "value": "\"1.0.0\""
+      "value": "\"1.0.1\""
     },
     {
       "filePath": "\/Users\/gokberkbardakci\/code\/colendi\/ColendiWebView\/ColendiWebViewSDK\/ColendiWebViewSDK\/Constants.swift",
