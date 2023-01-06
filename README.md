@@ -50,7 +50,7 @@ ColendiWebView is available through [CocoaPods](https://cocoapods.org). To insta
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod 'ColendiWebView'
+pod 'ColendiWebViewSDK'
 ```
 also add after last end statement of Podfile:
 
