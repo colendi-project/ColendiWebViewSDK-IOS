@@ -80,7 +80,7 @@ $ pod install
 
 ```swift
 import UIKit
-import ColendiWebView
+import ColendiWebViewSDK
 
 class ViewController: UIViewController, ColendiWebViewDelegate {
     
