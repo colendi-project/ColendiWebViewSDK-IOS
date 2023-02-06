@@ -6,7 +6,7 @@
 	<dict>
 		<key>ColendiWebViewSDK.podspec</key>
 		<data>
-		cS4RA4r+aPmvA0B7IHcpfL0dJeA=
+		9+MWIOQQJfhwKReuo7ZEfR4iLcM=
 		</data>
 		<key>Headers/ColendiWebViewSDK-Swift.h</key>
 		<data>
@@ -26,7 +26,7 @@
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		V8mabzONH5CEHT4Q63ApWUeBtjU=
+		iHYnRUAHG7t0NgAKdbobIbNqr24=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		6RMkS3k42pUP6tcepGZeH9BBVm8=
+		fBbi1wXu9t61zM9xbAErne38ATs=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		V8mabzONH5CEHT4Q63ApWUeBtjU=
+		iHYnRUAHG7t0NgAKdbobIbNqr24=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		8ujULJHvp/41DiUYWSq65My6mUU=
+		ok/y/OdueNlyLpRUnDx2WM8mUhE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,7 +79,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/lCXR19Msq8wqs9GX9eTTGIT8V/Gq2AiuY2jiSba7vs=
+			24UAwVQ/Squ8PQBfWiYmVja6lsF2hvibKMdbj3MotUI=
 			</data>
 		</dict>
 		<key>Headers/ColendiWebViewSDK-Swift.h</key>
@@ -107,7 +107,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kk2Z3f9Lpuywx6qjGw07gt4kowdqoCoLqHtkj0nzp7E=
+			Guj147bGHCWawGkkuXCPT14yxIiDjnfTS+h+hGixNYc=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -135,14 +135,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			A9o/s22LSPhvlqfJhQleVSHMfzB5jHzcI73CfCMbdKA=
+			TmBuSIg1CNm+gKcXV3REefENYuiHzYuvaEIAywnr8rw=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			kk2Z3f9Lpuywx6qjGw07gt4kowdqoCoLqHtkj0nzp7E=
+			Guj147bGHCWawGkkuXCPT14yxIiDjnfTS+h+hGixNYc=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -170,7 +170,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T8PcJiULlxn/8ZG5FDn7T30Zbmf4DujtQ1k92XutAIc=
+			m/BUYUNhw3Fn/hpQmNNn6RxjROxVc/WuU9zWTsKpbgE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
