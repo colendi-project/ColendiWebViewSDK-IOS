@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.5 (swiftlang-1300.0.31.1 clang-1300.0.29.1)
-// swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Amani
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Amani
 import AVFoundation
 import Accelerate
 @_exported import Amani
@@ -75,33 +75,33 @@ import _Concurrency
 }
 @available(iOSApplicationExtension, unavailable)
 extension Amani.IQKeyboardReturnKeyHandler : UIKit.UITextFieldDelegate {
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField)
   @available(iOS 10.0, *)
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextField.DidEndEditingReason)
-  @objc @_Concurrency.MainActor(unsafe) final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextField.DidEndEditingReason)
+  @_Concurrency.MainActor(unsafe) @objc final public func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
 }
 @available(iOSApplicationExtension, unavailable)
 extension Amani.IQKeyboardReturnKeyHandler : UIKit.UITextViewDelegate {
-  @objc @_Concurrency.MainActor(unsafe) final public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textViewShouldEndEditing(_ textView: UIKit.UITextView) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
-  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidEndEditing(_ textView: UIKit.UITextView)
-  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidChange(_ textView: UIKit.UITextView)
-  @objc @_Concurrency.MainActor(unsafe) final public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewShouldBeginEditing(_ textView: UIKit.UITextView) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewShouldEndEditing(_ textView: UIKit.UITextView) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewDidBeginEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewDidEndEditing(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc final public func textView(_ textView: UIKit.UITextView, shouldChangeTextIn range: Foundation.NSRange, replacementText text: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewDidChange(_ textView: UIKit.UITextView)
+  @_Concurrency.MainActor(unsafe) @objc final public func textViewDidChangeSelection(_ textView: UIKit.UITextView)
   @available(iOS 10.0, *)
-  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
   @available(iOS 10.0, *)
-  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange, interaction: UIKit.UITextItemInteraction) -> Swift.Bool
   @available(iOS, deprecated: 10.0)
-  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith URL: Foundation.URL, in characterRange: Foundation.NSRange) -> Swift.Bool
   @available(iOS, deprecated: 10.0)
-  @objc @_Concurrency.MainActor(unsafe) final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func textView(_ aTextView: UIKit.UITextView, shouldInteractWith textAttachment: UIKit.NSTextAttachment, in characterRange: Foundation.NSRange) -> Swift.Bool
 }
 public struct CustomerRequestModel : Swift.Codable {
   public var name: Swift.String?
@@ -167,10 +167,10 @@ public class DataGroup {
 @objc @available(iOS 13, *)
 public class PassportReader : ObjectiveC.NSObject {
   public var passiveAuthenticationUsesOpenSSL: Swift.Bool
-  public init(logLevel: Amani.LogLevel = .error, masterListURL: Foundation.URL? = nil)
+  public init(logLevel: Amani.LogLevel = .info, masterListURL: Foundation.URL? = nil)
   public func setMasterListURL(_ masterListURL: Foundation.URL)
   public func overrideNFCDataAmountToRead(amount: Swift.Int)
-  public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.NFCPassportReaderError?) -> ())
+  public func readPassport(mrzKey: Swift.String, tags: [Amani.DataGroupId] = [], skipSecureElements: Swift.Bool = true, skipCA: Swift.Bool = false, skipPACE: Swift.Bool = false, customDisplayMessage: ((Amani.NFCViewDisplayMessage) -> Swift.String?)? = nil, completed: @escaping (Amani.NFCPassportModel?, Amani.NFCPassportReaderError?) -> ())
   @objc deinit
 }
 @available(iOS 13, *)
@@ -668,8 +668,8 @@ public typealias HTTPHeaders = [Swift.String : Swift.String]
 }
 @available(iOSApplicationExtension, unavailable)
 extension Amani.IQKeyboardManager : UIKit.UIGestureRecognizerDelegate {
-  @objc @_Concurrency.MainActor(unsafe) final public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
-  @objc @_Concurrency.MainActor(unsafe) final public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIKit.UIGestureRecognizer) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc final public func gestureRecognizer(_ gestureRecognizer: UIKit.UIGestureRecognizer, shouldReceive touch: UIKit.UITouch) -> Swift.Bool
 }
 public enum NVActivityIndicatorType : Swift.Int {
   case blank
@@ -924,8 +924,8 @@ public class PACEInfo : Amani.SecurityInfo {
 }
 @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
 @objc @_Concurrency.MainActor(unsafe) open class IQTextView : UIKit.UITextView {
-  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreGraphics.CGRect, textContainer: UIKit.NSTextContainer?)
   @objc override dynamic open func awakeFromNib()
   @objc deinit
   @objc @IBInspectable @_Concurrency.MainActor(unsafe) open var placeholderTextColor: UIKit.UIColor? {
@@ -940,8 +940,8 @@ public class PACEInfo : Amani.SecurityInfo {
     get
     set
   }
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open func layoutSubviews()
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var text: Swift.String! {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String! {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
@@ -949,19 +949,19 @@ public class PACEInfo : Amani.SecurityInfo {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var font: UIKit.UIFont? {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var font: UIKit.UIFont? {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var textAlignment: UIKit.NSTextAlignment {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var textAlignment: UIKit.NSTextAlignment {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override weak dynamic open var delegate: UIKit.UITextViewDelegate? {
+  @_Concurrency.MainActor(unsafe) @objc override weak dynamic open var delegate: UIKit.UITextViewDelegate? {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var intrinsicContentSize: CoreGraphics.CGSize {
     @_Concurrency.MainActor(unsafe) @objc get
   }
 }
@@ -1056,8 +1056,8 @@ extension Amani.PassiveAuthenticationError : Foundation.LocalizedError {
 @_inheritsConvenienceInitializers @available(iOSApplicationExtension, unavailable)
 @objc @_Concurrency.MainActor(unsafe) open class IQBarButtonItem : UIKit.UIBarButtonItem {
   @objc override dynamic public init()
-  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var tintColor: UIKit.UIColor? {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor? {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
@@ -1118,14 +1118,14 @@ public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashab
     @objc get
     @objc set(newValue)
   }
-  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var tintColor: UIKit.UIColor! {
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var tintColor: UIKit.UIColor! {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open func layoutSubviews()
-  @objc @_Concurrency.MainActor(unsafe) open var enableInputClicksWhenVisible: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) @objc open var enableInputClicksWhenVisible: Swift.Bool {
     @objc get
   }
   @objc deinit
@@ -1136,7 +1136,7 @@ public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashab
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override dynamic open var title: Swift.String? {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var title: Swift.String? {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
@@ -1148,12 +1148,12 @@ public struct HTTPMethod : Swift.RawRepresentable, Swift.Equatable, Swift.Hashab
     @objc get
     @objc set
   }
-  @objc @_Concurrency.MainActor(unsafe) override open var invocation: Amani.IQInvocation? {
+  @_Concurrency.MainActor(unsafe) @objc override open var invocation: Amani.IQInvocation? {
     @_Concurrency.MainActor(unsafe) @objc get
     @_Concurrency.MainActor(unsafe) @objc set
   }
   @objc @_Concurrency.MainActor(unsafe) convenience public init(title: Swift.String?)
-  @objc @_Concurrency.MainActor(unsafe) required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
 }
 public struct CustomerDetailModel : Swift.Codable {
@@ -1342,41 +1342,17 @@ extension Amani.IQKeyboardManager {
     @objc set(newValue)
   }
 }
+@_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
+public class ActiveAuthenticationInfo : Amani.SecurityInfo {
+  override public func getObjectIdentifier() -> Swift.String
+  override public func getProtocolOIDString() -> Swift.String
+  public func getSignatureAlgorithmOIDString() -> Swift.String?
+  @objc deinit
+}
 @objc public protocol iProgressHUDDelegete {
   @objc optional func onTouch(view: UIKit.UIView)
   @objc optional func onShow(view: UIKit.UIView)
   @objc optional func onDismiss(view: UIKit.UIView)
-}
-@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @available(iOS 13, macOS 10.15, *)
-public class DataGroup12 : Amani.DataGroup {
-  public var issuingAuthority: Swift.String? {
-    get
-  }
-  public var dateOfIssue: Swift.String? {
-    get
-  }
-  public var otherPersonsDetails: Swift.String? {
-    get
-  }
-  public var endorsementsOrObservations: Swift.String? {
-    get
-  }
-  public var taxOrExitRequirements: Swift.String? {
-    get
-  }
-  public var frontImage: [Swift.UInt8]? {
-    get
-  }
-  public var rearImage: [Swift.UInt8]? {
-    get
-  }
-  public var personalizationTime: Swift.String? {
-    get
-  }
-  public var personalizationDeviceSerialNr: Swift.String? {
-    get
-  }
-  @objc deinit
 }
 public struct ClientInfoModel {
   public var serverURL: Swift.String!
@@ -1404,9 +1380,6 @@ public class NFCPassportModel {
     get
   }
   public var documentSubType: Swift.String {
-    get
-  }
-  public var personalNumber: Swift.String {
     get
   }
   public var documentNumber: Swift.String {
@@ -1443,6 +1416,9 @@ public class NFCPassportModel {
     get
   }
   public var phoneNumber: Swift.String? {
+    get
+  }
+  public var personalNumber: Swift.String? {
     get
   }
   public var documentSigningCertificate: Amani.X509Wrapper? {
