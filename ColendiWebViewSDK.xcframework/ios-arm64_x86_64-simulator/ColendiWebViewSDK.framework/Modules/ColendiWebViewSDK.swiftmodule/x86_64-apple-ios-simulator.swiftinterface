@@ -18,6 +18,10 @@ public protocol ColendiWebViewDelegate : AnyObject {
   @_Concurrency.MainActor(unsafe) public func setParentViewController(overParent parentViewController: UIKit.UIViewController)
   @_Concurrency.MainActor(unsafe) public func setDelegate(delegate: ColendiWebViewSDK.ColendiWebViewDelegate)
   @_Concurrency.MainActor(unsafe) public func sendMessage(message: Swift.String)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var insetsLayoutMarginsFromSafeArea: Swift.Bool {
+    @_Concurrency.MainActor(unsafe) @objc get
+    @_Concurrency.MainActor(unsafe) @objc set
+  }
   @objc deinit
 }
 extension ColendiWebViewSDK.ColendiWebView : WebKit.WKScriptMessageHandler {

@@ -6,11 +6,11 @@
 	<dict>
 		<key>ColendiWebViewSDK.podspec</key>
 		<data>
-		sofSDiCp7nVS4NW6bxVDhNyR6wc=
+		KmgsONHDl89TPnQjC7bKU9jWSiQ=
 		</data>
 		<key>Headers/ColendiWebViewSDK-Swift.h</key>
 		<data>
-		46tmWEoodoD3EU0r1iMt/G03RwY=
+		3BPCErW/JTTGqXqLnUoUiwPA7DM=
 		</data>
 		<key>Headers/ColendiWebViewSDK.h</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		E/H4LwjxTLZaL8ddiNiQO6Mscik=
+		h2WR2JrcbOGUR1ZIUrdsytlDJ6U=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		LXMPHSpCrlD9pI9gYZlVUHMqDtI=
+		fogUidKyVK74O5js1qVpNZYHVjI=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		BHDbYgVBLwJmoo4LHW5pd7a9bP4=
+		nslGY9TTOQSrEc7LgfcQkzhkuIY=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Pb+KdOTgy4h4sqXtm/eoQpuNPvY=
+		BQ0Tb2Z8TyaZDJA7P0pqoSZcbiw=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>README.md</key>
 		<data>
-		bogCbjTZ9kBvQBef4LAoBVXhdpQ=
+		GWr9v67PbE4scghYtg+054YkMPI=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -63,14 +63,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AueFdA64lZbpHtr+Qr0i1xMpNw8wYkkUFXKP/T47u08=
+			66iBSJelAmxZn1ANKQN2ZjDBP6ruNdbTipx0Jx6SwNs=
 			</data>
 		</dict>
 		<key>Headers/ColendiWebViewSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			5j0y0SokeQhII7awa0ZSlKsjU57eJ5nbGQgAbM80PdU=
+			HCmRnj4NWcL8PbeC5+yjHYFtOEDIsK1tI4BSNAnpC6Y=
 			</data>
 		</dict>
 		<key>Headers/ColendiWebViewSDK.h</key>
@@ -98,14 +98,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			58Jq2xKe00m6IYa5AVBwMoNOlnW07KdxV4KNxBSfiM0=
+			FR7A3SnUxYitMBCHe/a/PaMrfO6v12N1OqCHshJ603E=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PHpIgZwgyDif7yyspVo7HUC1OTZmT5iWpuMdkuMBEGw=
+			cboVhPRp/becKutaVr87stCP/orPKyQxkDzZOukvBL4=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -119,14 +119,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YwWqUq9bS8ksyHDqeezZTij+5IT/zHasJzX5VU+RkvQ=
+			mUu/4/BptoU5eDIHEfjCni9uMvlFlILHlda5EFqCpZE=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			hzc6DQreoRRqdcOqaxjaTu7ovkwOLah7ACog/oeaD3E=
+			hE2hh4RWDAbpM/2aGLLLD0e3BXyYxThWRYeqaqz/mh0=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -140,7 +140,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			OARIjixbvcPhqsTX9MoRX6AHutSBB3MD1Z8shufUBno=
+			8pcDRnxiT25QVVdonrK+CC4GERHfuRdQo9yZy1PXLsY=
 			</data>
 		</dict>
 	</dict>

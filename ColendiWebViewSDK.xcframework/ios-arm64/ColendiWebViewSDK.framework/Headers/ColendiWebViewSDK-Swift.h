@@ -221,6 +221,7 @@ SWIFT_CLASS("_TtC17ColendiWebViewSDK14ColendiWebView")
 @interface ColendiWebView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
+@property (nonatomic) BOOL insetsLayoutMarginsFromSafeArea;
 @end
 
 

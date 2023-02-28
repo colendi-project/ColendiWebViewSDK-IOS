@@ -90,6 +90,10 @@ class ViewController: UIViewController, ColendiWebViewDelegate {
         super.viewDidLoad()
         colendiView = ColendiWebView(frame: self.view.frame)
         colendiView?.setDelegate(delegate: self)
+
+        /// Set insetsLayoutMarginsFromSafeArea false before loadUrl function to open ColendiWebView fullscreen.
+        colendiView?.insetsLayoutMarginsFromSafeArea = false
+
         self.view.addSubview(self.colendiView!)
 
         //Change the 'URL' with colendi web app's url
