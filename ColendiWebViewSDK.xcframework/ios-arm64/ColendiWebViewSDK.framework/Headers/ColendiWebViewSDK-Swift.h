@@ -232,7 +232,6 @@ SWIFT_CLASS("_TtC17ColendiWebViewSDK14ColendiWebView")
 - (void)userContentController:(WKUserContentController * _Nonnull)userContentController didReceiveScriptMessage:(WKScriptMessage * _Nonnull)message;
 @end
 
-
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
 #endif
