@@ -6,11 +6,11 @@
 	<dict>
 		<key>ColendiWebViewSDK.podspec</key>
 		<data>
-		KmgsONHDl89TPnQjC7bKU9jWSiQ=
+		EK9dZmLk1JaQey38Bc5kpOi1eOY=
 		</data>
 		<key>Headers/ColendiWebViewSDK-Swift.h</key>
 		<data>
-		E9MX8ND30N+t9dQoKHukfTYu6CM=
+		cL2/o7wvxH9KaWFvYe2dA0pQJRk=
 		</data>
 		<key>Headers/ColendiWebViewSDK.h</key>
 		<data>
@@ -18,31 +18,39 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		TxWcyTwloJ2T8T/47iy+aZVcq9o=
+		8Z1AfrGviuZ06DYMzq0yndd1qCY=
 		</data>
 		<key>LICENSE</key>
 		<data>
 		CrNYemqdPtd9SMikIsRTuOgFLxA=
 		</data>
+		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<data>
+		b1D3OCKMLIjnzf+S9mNaUXAZUtU=
+		</data>
+		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<data>
+		zsKluf4NtH0B9zBiBoR6Nr0llkk=
+		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
-		kDZvzuRivj2R6rjSFlxcdG2mgrk=
+		7uiwNSPN+/tx0hrmfnnvXkGVNz0=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		eU0nKIvyGaQ8ndf4+klqywSO3Fc=
+		zsKluf4NtH0B9zBiBoR6Nr0llkk=
 		</data>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		cfxnaewfZpXljtYlKfWZkAhyHF8=
+		WjKuj4MzgOe9wDBvepVL1gCBHjE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		2pbISBzfULwG9GfETp3URB6No38=
+		rTXvD+gTzEBTpqKvcNVKzOlOhxw=
 		</data>
 		<key>README.md</key>
 		<data>
-		GWr9v67PbE4scghYtg+054YkMPI=
+		qB6wSRXgocIeLkn6ph9HUbvF5eg=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -51,14 +59,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			66iBSJelAmxZn1ANKQN2ZjDBP6ruNdbTipx0Jx6SwNs=
+			bUoerFccb1fCAncTCb6prjRDLsVsJ+uCc8vLMbnbo5A=
 			</data>
 		</dict>
 		<key>Headers/ColendiWebViewSDK-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pmyk2hbWKZNUVFb9gEOinF/VETIuYya34O/Vk7WNBPs=
+			ymKWc055p9rfHErib6uaC+EyLqAjvL+0Kv4fh5dm1lk=
 			</data>
 		</dict>
 		<key>Headers/ColendiWebViewSDK.h</key>
@@ -75,39 +83,53 @@
 			N0P3pKtRMvfb64jmgJdlerg3TnS0a2QC776AzPsbZIg=
 			</data>
 		</dict>
+		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.abi.json</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5BCBzQZbclpxmWw85gpviD1Cgo4F0MEi+swbEZiQjcU=
+			</data>
+		</dict>
+		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			pyjMOyfE9WzvZkf7ee3erq65HlFUiXiYGG0tyqJO3k8=
+			</data>
+		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GLaZovZ7wpr7+JbEOrYRZYS1ju8PI4TnB48eIjyiobE=
+			cGt9ov0Ho5IAi6TwFmmqQSGoTHD2JAdSfcHuDGZU04w=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8V6FjgLelJv6EULFXUdLRXnK2kwznrL0j4+zsesaT8w=
+			pyjMOyfE9WzvZkf7ee3erq65HlFUiXiYGG0tyqJO3k8=
 			</data>
 		</dict>
 		<key>Modules/ColendiWebViewSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			DL4kPfvF13EyD6z3S0Dy8i4jqNrTYlbJFNKJTjfaTPU=
+			tphcykBalvyT+ltkdWI7gdAfMoKqTQa68D9TX28EUxg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			NNXw6vC2PtDVxACLpcKelLlh1WLlJCWFu5RFsobcSwY=
+			9zXl5gljPwrwlVFqUXkspta0rU4rfEJQ6K+9dgEZbY8=
 			</data>
 		</dict>
 		<key>README.md</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8pcDRnxiT25QVVdonrK+CC4GERHfuRdQo9yZy1PXLsY=
+			EtqbUOIoPAJZHsCbJLDMXlWs0MyicKWuu3xzerukczk=
 			</data>
 		</dict>
 	</dict>

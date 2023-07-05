@@ -108,6 +108,15 @@ class ViewController: UIViewController, ColendiWebViewDelegate {
 }
 
 ```
+### Optional Functions in ColendiWebViewDelegate
+
+```swift
+func decidePolicyForNavigationAction(decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {}
+
+func didReceiveAuthenticationChallenge(didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {}
+
+func didFailNavigation(didFail navigation: WKNavigation!, withError error: Error) {}
+```
 
 # Author
 

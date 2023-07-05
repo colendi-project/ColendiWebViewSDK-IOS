@@ -6,6 +6,6 @@ framework module ColendiWebViewSDK {
 }
 
 module ColendiWebViewSDK.Swift {
-    header "ColendiWebViewSDK-Swift.h"
-    requires objc
+  header "ColendiWebViewSDK-Swift.h"
+  requires objc
 }

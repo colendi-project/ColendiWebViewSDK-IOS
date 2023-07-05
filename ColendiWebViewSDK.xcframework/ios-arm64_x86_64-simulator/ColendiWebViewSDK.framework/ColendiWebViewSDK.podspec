@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ColendiWebViewSDK'
-  s.version          = '1.1.4'
+  s.version          = '1.1.5'
   s.summary          = 'The Colendi Web View Software Development Kit.'
 
   s.description      = <<-DESC
@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
   
   s.ios.vendored_frameworks = 'ColendiWebViewSDK.xcframework', 'Amani.xcframework'
   s.dependency 'lottie-ios', '4.1.2'
-  s.dependency 'OpenSSL-Universal', '~> 1.1.1300'
+  s.dependency 'OpenSSL-Universal', '~> 1.1.1100'
   
 end
