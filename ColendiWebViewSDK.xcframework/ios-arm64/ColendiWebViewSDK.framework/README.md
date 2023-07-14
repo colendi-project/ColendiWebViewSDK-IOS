@@ -62,8 +62,10 @@ post_install do |installer|
     #config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
     installer.pods_project.targets.each do |target|
       target.build_configurations.each do |config|
-        config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
         config.build_settings.delete 'IPHONEOS_DEPLOYMENT_TARGET'
+        if target.name == 'lottie-ios'
+          config.build_settings['BUILD_LIBRARY_FOR_DISTRIBUTION'] = 'YES'
+        end
       end
     end
   end
