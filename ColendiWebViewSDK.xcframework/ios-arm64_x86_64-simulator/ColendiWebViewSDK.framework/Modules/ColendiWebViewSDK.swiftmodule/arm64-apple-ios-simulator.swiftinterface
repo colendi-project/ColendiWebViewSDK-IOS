@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
 // swift-module-flags: -target arm64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ColendiWebViewSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Amani
@@ -14,19 +14,19 @@ public protocol ColendiWebViewDelegate : AnyObject {
   func messageCallback(message: Swift.String)
   func decidePolicyForNavigationAction(decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   func didReceiveAuthenticationChallenge(didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-  func didFailNavigation(didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  func didFailNavigation(didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
 }
 extension ColendiWebViewSDK.ColendiWebViewDelegate {
   public func decidePolicyForNavigationAction(decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   public func didReceiveAuthenticationChallenge(didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-  public func didFailNavigation(didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  public func didFailNavigation(didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class ColendiWebView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
   @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @_Concurrency.MainActor(unsafe) public func loadUrl(url: Foundation.URL)
   @_Concurrency.MainActor(unsafe) public func setParentViewController(overParent parentViewController: UIKit.UIViewController)
-  @_Concurrency.MainActor(unsafe) public func setDelegate(delegate: ColendiWebViewSDK.ColendiWebViewDelegate)
+  @_Concurrency.MainActor(unsafe) public func setDelegate(delegate: any ColendiWebViewSDK.ColendiWebViewDelegate)
   @_Concurrency.MainActor(unsafe) public func sendMessage(message: Swift.String)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public var insetsLayoutMarginsFromSafeArea: Swift.Bool {
     @objc get
@@ -40,7 +40,7 @@ extension ColendiWebViewSDK.ColendiWebView : WebKit.WKScriptMessageHandler {
 extension ColendiWebViewSDK.ColendiWebView : WebKit.WKNavigationDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: @escaping (WebKit.WKNavigationActionPolicy) -> Swift.Void)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didReceive challenge: Foundation.URLAuthenticationChallenge, completionHandler: @escaping (Foundation.URLSession.AuthChallengeDisposition, Foundation.URLCredential?) -> Swift.Void)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: Swift.Error)
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func webView(_ webView: WebKit.WKWebView, didFail navigation: WebKit.WKNavigation!, withError error: any Swift.Error)
 }
 extension ColendiWebViewSDK.ColendiWebView : Amani.AmaniSDKDelegate {
   @_Concurrency.MainActor(unsafe) public func onKYCSuccess(CustomerId: Swift.Int)
