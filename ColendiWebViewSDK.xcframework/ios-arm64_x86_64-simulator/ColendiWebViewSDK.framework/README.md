@@ -21,7 +21,7 @@ The Colendi Web View is a Software Development Kit developed by Colendians to en
 
 ## General Requirements
 The minimum required iOS version for the SDK is:  
-* iOS 11.0 or higher  
+* iOS 12.0 or higher  
 
 ## Permissions
 

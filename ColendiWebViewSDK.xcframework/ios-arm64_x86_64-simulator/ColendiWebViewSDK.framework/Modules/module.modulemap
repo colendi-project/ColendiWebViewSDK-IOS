@@ -1,7 +1,7 @@
 framework module ColendiWebViewSDK {
   umbrella header "ColendiWebViewSDK.h"
-
   export *
+
   module * { export * }
 }
 
